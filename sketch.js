@@ -38,7 +38,11 @@ function draw() {
 			let x = ((2*i+1) * RECT_WIDTH) - (RECT_WIDTH/2);
 			let y = ((2*j+1) * RECT_WIDTH) - (RECT_WIDTH/2);
 			translate(x, y);
-			rotate(ROTATION*i + ROTATION*j + ROTATION_STEP * STEP_COUNT);
+			let rotation = i >= 3 && i <= 7 && j>= 3 && j<=7 ? ROTATION*i + ROTATION*j + ROTATION_STEP * STEP_COUNT : 0;
+
+			// rotate(rotation);
+			rotate(ROTATION*i + ROTATION*j + ROTATION_STEP * STEP_COUNT)
+			// rotate(ROTATION*i + ROTATION*j)
 			fill(0, 0, 100);
 			rect(0, 0, RECT_WIDTH, RECT_WIDTH); 
 			pop();
