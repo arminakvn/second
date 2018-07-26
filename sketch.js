@@ -12,7 +12,7 @@ function setup() {
 	
 	console.log(windowWidth)
 console.log(windowHeight)	
-	START_POINT = [200, 200]
+	START_POINT = [100, 100]
 	RECT_NUM = 10;
 	ROTATION = (PI / 2) / (RECT_NUM - 1);
 	ROTATION_STEP = PI / 720;
@@ -42,7 +42,7 @@ function draw() {
 
 			// rotate(rotation);
 			rotate(ROTATION*i + ROTATION*j + ROTATION_STEP * STEP_COUNT)
-			// rotate(ROTATION*i + ROTATION*j)
+			rotate(ROTATION*i + ROTATION*j)
 			fill(0, 0, 100);
 			rect(0, 0, RECT_WIDTH, RECT_WIDTH); 
 			pop();
